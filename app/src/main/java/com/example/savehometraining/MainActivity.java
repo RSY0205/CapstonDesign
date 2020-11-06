@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent1=new Intent(getApplicationContext(), Connectsignup.class);
                 startActivity(intent1);
+
             }
         });
     }
