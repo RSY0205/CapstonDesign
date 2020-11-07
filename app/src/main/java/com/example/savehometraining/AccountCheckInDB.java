@@ -34,7 +34,6 @@ public class AccountCheckInDB {
         if(User[4].equals(User[5])==false){User_Check[5]=Boolean.FALSE;}
     }
     public void LangeOut(String User[],Boolean User_Check[]){
-        if(User[1].length()<8)User_Check[1]=Boolean.FALSE;//생년월일7자리이하 불가
         if(User[3].length()<4)User_Check[3]=Boolean.FALSE;//ID최소길이 4
         if(User[4].length()<7)User_Check[4]=Boolean.FALSE;//비밀번호 최소 7
         if(User[5].length()<7)User_Check[5]=Boolean.FALSE;//Sub비밀번호 최소 7

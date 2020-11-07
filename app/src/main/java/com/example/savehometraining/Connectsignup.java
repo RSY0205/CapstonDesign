@@ -1,8 +1,10 @@
 package com.example.savehometraining;
 
+import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -12,8 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Connectsignup extends AppCompatActivity{
 
-    Button MakeAccount,CheckID,ChecknickName;
-
+    Button MakeAccount,CheckID,ChecknickName,CheckBirth;
+    DatePickerDialog.OnDateSetListener callbackMethod;//달력 기능
     EditText Edit_name,Edit_birth,Edit_id,Edit_pw,Edit_subpw,Edit_nickname,Edit_phone,Edit_height,Edit_weight;
     RadioGroup Radio_gender;
     String User[]=new String[10];
@@ -29,6 +31,7 @@ public class Connectsignup extends AppCompatActivity{
         MakeAccount=(Button)findViewById(R.id.buttonMakeAccount);
         CheckID=(Button)findViewById(R.id.buttoncheckid);
         ChecknickName=(Button)findViewById(R.id.buttonchecknickname);
+        CheckBirth=(Button)findViewById(R.id.ButtonBirtyday);
         //버튼 가져오기
 
         Edit_name=(EditText)findViewById(R.id.User_name);
@@ -71,10 +74,28 @@ public class Connectsignup extends AppCompatActivity{
                 function.CheckPWD(User,User_Check);//비밀번호 sub비밀번호 일치 확인
                 function.LangeOut(User,User_Check);//값범위 검사
                 error=function.ErrorMessage(User_kr,User_Check);//에러 Edit 찾기
+                //아무 값도 입력안됬을시 오류 출력
                 if(error!=null){Toast.makeText(Connectsignup.this, error+"을(를) 확인하세요", Toast.LENGTH_SHORT).show();}
                 //finish();
             }
         });
+
+        CheckBirth.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                //생년월일 선택
+                callbackMethod = new DatePickerDialog.OnDateSetListener()
+                {
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+                        Edit_birth.setText(year + "년" + monthOfYear + "월" + dayOfMonth + "일");
+                    }
+                };
+
+                DatePickerDialog dialog=new DatePickerDialog(Connectsignup.this,callbackMethod,2019,5,24);
+                dialog.show();
+            }
+        });
+
 
         CheckID.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){

@@ -6,19 +6,26 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    Button SignUp;
-    Button Login;
+    Button Button_SignUp,Button_Login;
+    EditText Edit_ID,Edit_PW;
+    String id,pw;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        SignUp=(Button)findViewById(R.id.ButtonSignup);
-        Login=(Button)findViewById(R.id.Buttonlogin);
+        Button_SignUp=(Button)findViewById(R.id.ButtonSignup);
+        Button_Login=(Button)findViewById(R.id.Buttonlogin);
 
-        SignUp.setOnClickListener(new View.OnClickListener() {
+        Edit_ID=(EditText)findViewById(R.id.login_id);
+        Edit_PW=(EditText)findViewById(R.id.login_pw);
+
+        Button_SignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent signup=new Intent(getApplicationContext(), Connectsignup.class);
@@ -27,9 +34,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Login.setOnClickListener(new View.OnClickListener() {
+        Button_Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                id=Edit_ID.getText().toString();
+                pw=Edit_PW.getText().toString();
+
+
                 //Intent login=new Intent(getApplicationContext(),???.class);
                 //startActivity(login);
 
@@ -37,3 +48,4 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 }
+
