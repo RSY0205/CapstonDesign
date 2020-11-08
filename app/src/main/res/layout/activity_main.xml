@@ -62,6 +62,13 @@
              />
 
         <Button
+            android:id="@+id/ButtonTest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TEST"
+            android:textStyle="bold" />
+
+        <Button
             android:id="@+id/ButtonSignup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

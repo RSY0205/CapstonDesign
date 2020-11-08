@@ -23,6 +23,7 @@ public class Connectsignup extends AppCompatActivity{
     String[] User_kr=new String[]{"이름","생년월일","성별","ID","PW","PW","별명","전화번호","신장","몸무계"};
     String error=null;          //  0       1        2     3    4     5    6       7        8       9
     AccountCheckInDB function=new AccountCheckInDB();
+    User user_register=new User();
 
     protected void onCreate(Bundle saveInstanceState){
         super.onCreate(saveInstanceState);
@@ -76,6 +77,8 @@ public class Connectsignup extends AppCompatActivity{
                 error=function.ErrorMessage(User_kr,User_Check);//에러 Edit 찾기
                 //아무 값도 입력안됬을시 오류 출력
                 if(error!=null){Toast.makeText(Connectsignup.this, error+"을(를) 확인하세요", Toast.LENGTH_SHORT).show();}
+                user_register.makeUser(User);
+
                 //finish();
             }
         });
