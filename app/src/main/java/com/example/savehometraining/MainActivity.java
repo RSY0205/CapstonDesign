@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent signup=new Intent(getApplicationContext(), Connectsignup.class);
                 startActivity(signup);
-
+    //test용 주석추가
             }
         });
 
