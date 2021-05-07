@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout_routineList"
+    android:orientation="vertical"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:background="@drawable/border">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="운동이름"
+        android:id="@+id/textview_exercisename"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textColor="#0067A3"
+        android:layout_margin="1dp">
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_margin="3dp"
+        android:gravity="center"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"
+            android:text="갯수"
+            android:id="@+id/textview_exercisecount"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="세트"
+            android:id="@+id/textview_exerciseset"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+</LinearLayout>

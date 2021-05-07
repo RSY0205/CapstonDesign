@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ScrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="회원가입"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        /><!--회원가입 제목-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical">
+    <EditText
+        android:id="@+id/User_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="이름을 입력해주세요     "
+        android:inputType="textPersonName"
+        android:singleLine="true"
+        /><!--이름-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/User_birth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:singleLine="true"
+            android:hint="생년월일을 선택해주세요         " />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="선택하기"
+            android:id="@+id/ButtonBirtyday"/>
+    </LinearLayout>><!--생년월일-->
+
+
+    <RadioGroup
+        android:id="@+id/genderGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="남성"
+            android:id="@+id/User_Man"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="여성"
+            android:id="@+id/User_Woman"/>
+    </RadioGroup><!--라디오버튼 성별-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/User_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="아이디를 입력해주세요(4자리~13자리)"
+            android:singleLine="true"
+            android:maxLength="13"
+            android:inputType="textPersonName" />
+        <Button
+            android:id="@+id/buttoncheckid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="OnClickHandler"
+            android:text="중복확인"/>
+    </LinearLayout><!--아이디(중복검사)-->
+
+    <EditText
+        android:id="@+id/User_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="비밀번호를 입력해주세요(7자리~ 20자리)"
+        android:singleLine="true"
+        android:maxLength="20"
+        android:inputType="textPassword"
+        /><!--비밀번호-->
+
+        <EditText
+            android:id="@+id/Sub_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="비밀번호를 다시 입력해주세요     "
+            android:maxLength="20"
+            android:inputType="textPassword"
+            /><!--비밀번호를 다시 입력해주세요-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/User_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="별명을 입력해주세요(공백 불가) "
+            android:singleLine="true"
+            android:inputType="textPersonName"
+            android:maxLength="10"
+            /><!--별명-->
+
+        <Button
+            android:id="@+id/buttonchecknickname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="중복확인"/>
+    </LinearLayout><!--닉네임(중복검사)-->
+
+    <EditText
+        android:id="@+id/User_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="전화번호를 입력해주세요(-제외)    "
+        android:singleLine="true"
+        android:maxLength="11"
+        android:inputType="phone"
+        /><!--전화번호-->
+
+    <EditText
+        android:id="@+id/User_height"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="키를 입력해주세요(CM)     "
+        android:singleLine="true"
+        android:maxLength="3"
+        android:inputType="number"
+        /><!--키-->
+
+    <EditText
+        android:id="@+id/User_Weight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="몸무계를 입력해주세요(KG)     "
+        android:singleLine="true"
+        android:maxLength="3"
+        android:inputType="number"
+        /><!--몸무계-->
+
+    <Button
+        android:id="@+id/buttonMakeAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="확인"
+        android:textSize="30sp"
+        android:layout_marginTop="35dp"
+        />   <!--확인버튼-->
+
+    </LinearLayout>
+
+
+</LinearLayout>
+</ScrollView>

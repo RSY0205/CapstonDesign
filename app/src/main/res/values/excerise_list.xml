@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="excerise_list">
+        <item>전체</item>
+        <item>어깨</item>
+        <item>팔</item>
+        <item>가슴</item>
+        <item>등</item>
+        <item>복부</item>
+        <item>코어</item>
+        <item>엉덩이</item>
+        <item>허벅지</item>
+        <item>전신</item>
+    </string-array>
+</resources>
