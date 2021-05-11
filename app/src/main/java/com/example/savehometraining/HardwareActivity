@@ -129,7 +129,7 @@ public class HardwareActivity extends AppCompatActivity {
                 if(inHardSet >= inSet) { //세트 개수를 충족하는 경우
                     // Dialog 생성
                     AlertDialog.Builder dlg = new AlertDialog.Builder(HardwareActivity.this, android.R.style.Theme_DeviceDefault_Light_Dialog);  // 새 AlertDialog 생성
-                    dlg.setMessage("추가 SET를 진행하시겠습니까??")  // 메시지 설정
+                    dlg.setMessage("추가 SET를 진행하습니까??")  // 메시지 설정
                             .setTitle("!경고!");  // 제목 설정
 
                     // 버튼 설정
@@ -163,17 +163,24 @@ public class HardwareActivity extends AppCompatActivity {
                         // "아니요" 를 눌렀을 때
                     }) .setNeutralButton("아니요", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                            if(tv_lecountText.getText().toString().equals(0)) { //남은 운동 수가 0일 경우
+                            if(tv_lecountText.getText().toString().equals("1")) { //마지막 운동일 경우
                                 tv_exNameText.setText("Finish");
-                                tv_hardSetText.setText("0");
-                                cTask.cancel();
+                                tv_setText.setText("0"); //불러온 세트 값 초기화
+                                tv_hardSetText.setText("0"); //측정한 세트 값 초기화
+                                tv_countText.setText("0"); //불러온 카운트 값 초기화
+                                String stLecount = tv_lecountText.getText().toString();
+                                int inLecount = Integer.parseInt(stLecount);
+                                inLecount = inLecount - 1;
+                                tv_lecountText.setText(Integer.toString(inLecount)); //남은 운동 수 -1
+                                cTask.cancel(); //측정한 카운트 값 초기화
                                 rTask = countResetTTMaker();
                                 timer.schedule(rTask, 0); // 즉시 resetTask 발동
                                 cTask = socketTTMaker();
                                 timer.schedule(cTask, 500, 200); // 타아머의 속도는 0.2초로 설정(버튼이 눌리는 시간)
                                 Toast.makeText(HardwareActivity.this,"루틴을 완료하였습니다.",Toast.LENGTH_SHORT).show();
+                                ///////////////// 서버에 루틴 완료 값 전송
                             }
-                            else {// 남은 운동 수가 1 이상일 경우
+                            else {// 다음 운동이 존재할 경우
                                 cTask.cancel();
                                 rTask = countResetTTMaker();
                                 timer.schedule(rTask, 0); // 즉시 resetTask 발동
