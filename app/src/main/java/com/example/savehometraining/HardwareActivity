@@ -165,6 +165,7 @@ public class HardwareActivity extends AppCompatActivity {
                         public void onClick(DialogInterface dialog, int which) {
                             if(tv_lecountText.getText().toString().equals("1")) { //마지막 운동일 경우
                                 tv_exNameText.setText("Finish");
+                                tv_exCountText.setText("0"); //총 운동 개수 값 초기화
                                 tv_setText.setText("0"); //불러온 세트 값 초기화
                                 tv_hardSetText.setText("0"); //측정한 세트 값 초기화
                                 tv_countText.setText("0"); //불러온 카운트 값 초기화
