@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="message">
+        <item>봉은 조상님이 들어주시냐!</item>
+        <item>20+20=60</item>
+        <item>견뎌!</item>
+        <item>복근 VS 모근</item>
+    </string-array>
+</resources>

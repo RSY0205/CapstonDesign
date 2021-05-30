@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+    <ImageView
+        android:id="@+id/ImageView_Dialog"
+        android:layout_width="900px"
+        android:layout_height="1200px"
+        android:layout_margin="10dp"
+        android:layout_gravity="center" />
+    <TextView
+        android:id="@+id/Textview_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:text="운동이름"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <EditText
+                android:id="@+id/EditText_dialog_count_min"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="갯수"
+                android:inputType="number"
+                android:textSize="25dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" X "
+                android:textSize="30dp"
+                android:id="@+id/Textview_min_x"
+                android:textColor="@color/black"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/EditText_dialog_set_sec"
+                android:textSize="25dp"
+                android:inputType="number"
+                android:hint="세트"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30dp"
+                    android:id="@+id/Textview_sec"
+                    android:textColor="@color/black"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="취소"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:id="@+id/Button_DialogNO">
+            </Button>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="확인"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:id="@+id/Button_DialogOK">
+            </Button>
+        </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">구해줘!홈트!</string>
+    <string name="title_activity_training">MainActivity</string>
+    <string name="title_Calendar">Calendar</string>
+    <string name="title_Routine">Routine</string>
+    <string name="title_Community">Community</string>
+    <string name="activityName">글쓰기</string>
+    <string name="title">제목</string>
+    <string name="subtitle">소제목</string>
+    <string name="content">내용을 입력하세요</string>
+</resources>

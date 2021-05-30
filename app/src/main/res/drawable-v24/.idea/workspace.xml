@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4e6207f7-bd25-4d57-9c38-a1c7da22d964" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../java/com/example/savehometraining/Connectsignup.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/example/savehometraining/Connectsignup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/example/savehometraining/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/example/savehometraining/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout/login_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout/login_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout/login_signup.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout/login_signup.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout/main_fragment_comnity.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout/main_fragment_comnity.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
+  </component>
+  <component name="ProjectId" id="1kUjanFICsiiuIZQ4FsUPQ1gDsX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4e6207f7-bd25-4d57-9c38-a1c7da22d964" name="Default Changelist" comment="" />
+      <created>1605762129548</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605762129548</updated>
+    </task>
+    <servers />
+  </component>
+</project>
