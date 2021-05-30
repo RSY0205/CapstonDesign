@@ -413,7 +413,7 @@ public class Routine_HardwareActivity extends AppCompatActivity {
         TimerTask tempTask = new TimerTask() {
             @Override
             public void run() {
-                MyClientTask socketTask = new MyClientTask("192.168.0.31", Integer.parseInt("8091"), "send");
+                MyClientTask socketTask = new MyClientTask("192.168.0.17", Integer.parseInt("8091"), "send");
                 socketTask.execute(); // "send" 값 전송하여 소켓 통신 서버에 연결
             }
         };
@@ -424,7 +424,7 @@ public class Routine_HardwareActivity extends AppCompatActivity {
         TimerTask tempTask = new TimerTask() {
             @Override
             public void run() {
-                MyClientTask resetTask = new MyClientTask("192.168.0.31", Integer.parseInt("8091"), "reset");
+                MyClientTask resetTask = new MyClientTask("192.168.0.17", Integer.parseInt("8091"), "reset");
                 resetTask.execute(); // 리셋 버튼 클릭시 소켓통신 서버에 "reset" 값 전송
             }
         };
